@@ -1,0 +1,525 @@
+<!--<?php
+//-----------------------------------------页面头部------------------------------------------------
+print <<<EOT
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>广西广电网络网站管理系统 - install</title>
+<link href="images/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">
+        <a href="http://www.96335.com/"><img src="images/logo.png" /></a>
+    </div> <!-- /logo -->
+	<h1>安装向导</h1>
+</div> <!-- /header -->
+
+<div class="main">
+
+<!--
+EOT;
+if(empty($step)){
+//-----------------------------------------打印安装协议------------------------------------------------
+if(!$check)
+{
+print <<<EOT
+-->
+	<div class="msg error">
+		<img src="images/error.gif" alt="错误" /><br />
+		<strong class="red">$error_txt</strong><br />
+	</div>
+<!--
+EOT;
+}
+else
+{
+print <<<EOT
+-->
+	<div class="box_header">
+		<h2>安装协议</h2>
+	</div> <!-- /box_header -->
+
+	<div class="box_main license">
+		<h2 align="center">广西广电网络管理系统 安装协议</h2>
+		
+		<p>本授权协议适用且仅适用于广西广电网络管理系统，广西广电网络拥有对本授权协议的最终解释权。</p>
+		<ul>
+			<li>
+				<b>协议许可的权利</b>
+				<ul id="list_ul">
+					<li>您可以在协议规定的约束和限制范围内修改广西广电网络管理系统源代码(如果被提供的话)或界面风格以适应您的网站要求。</li>
+					<li>您拥有使用本软件构建的网站中的文章、图片及相关信息的所有权，并独立承担与文章、图片的相关法律义务。</li>
+					<li>获得商业授权之后，您可以将本软件应用于商业用途，同时依据所购买的授权类型中确定的技术支持期限、技术支持方式和技术支持内容，自购买时刻起，在技术支持期限内拥有通过指定的方式获得指定范围内的技术支持服务。商业授权用户享有反映和提出意见的权力，相关意见将被作为首要考虑，但没有一定被采纳的承诺或保证。</li>
+				</ul>
+			</li>
+			<li>
+				<b>协议规定的约束和限制</b>
+				<ul id="list_ul">
+					<li>未获商业授权之前，不得将本软件用于商业用途（包括但不限于政府单位、教育机构、协会团体、企业网站、经营性网站、以营利为目或实现盈利的网站）。购买商业授权请登陆http://www.96335.com/ 参考相关说明。</li>
+					<li>不得对本软件或与之关联的授权进行出租、出售、抵押或发放子许可证。</li>
+					<li>无论如何，即无论用途如何、是否经过修改或美化、修改程度如何，只要使用广西广电网络管理系统的整体或任何部分，未经书面许可，网站页面页脚处的广西广电网络名称和下属网站（http://www.96335.com/）的链接都必须保留，而不能清除或修改。</li>
+					<li>禁止在广西广电网络管理系统的整体或任何部分基础上以发展任何派生版本、修改版本或第三方版本用于重新分发。</li>
+					<li>如果您未能遵守本协议的条款，您的授权将被终止，所被许可的权利将被收回，并承担相应法律责任。</li>
+				</ul>
+			</li>
+			<li>
+				<b>有限担保和免责声明</b>
+				<ul id="list_ul">
+					<li>本软件及所附带的文件是作为不提供任何明确的或隐含的赔偿或担保的形式提供的。</li>
+					<li>用户出于自愿而使用本软件，您必须了解使用本软件的风险，在尚未购买产品技术服务之前，我们不承诺提供任何形式的技术支持、使用担保，也不承担任何因使用本软件而产生问题的相关责任。</li>
+				</ul>
+			</li>
+		</ul>
+		<p>有关广西广电网络最终用户授权协议、授权与技术服务的详细内容，均由广西广电网络官方网站独家提供。广西广电网络拥有在不事先通知的情况下，修改授权协议和服务价目表的权力，修改后的协议或价目表对自改变之日起的新授权用户生效。</p>
+		<p>电子文本形式的授权协议如同双方书面签署的协议一样，具有完全的和等同的法律效力。您一旦开始安装 广西广电网络，即被视为完全理解并接受本协议的各项条款，在享有上述条款授予的权力的同时，受到相关的约束和限制。协议许可范围以外的行为，将直接违反本授权协议并构成侵权，我们有权随时终止授权，责令停止损害，并保留追究相关责任的权力。</p>
+	</div> <!-- /box_main, license -->
+
+	<div class="box_footer">
+		<div class="step">
+		<form method="post" action='$basename'>
+			<input type="hidden" name="step" value="1">
+			<input type="submit" class="button" name="submit" value="同 意" />
+			<input type="button" class="button" onclick="javascript:window.close();"  value="拒 绝" />
+		</form>
+		</div>
+	</div> <!-- /box_footer -->
+
+<!--
+EOT;
+}
+}elseif($step == 1){
+//-----------------------------------------安装第1步，输入库配置文件可写检测------------------------------------------------
+print <<<EOT
+-->
+	<div class="box_header">
+		<h2>第一步</h2>
+	</div> <!-- /box_header -->
+
+	<div class="box_main">
+		<h2>请检查以下文件是否有写权限</h2>
+		<table class="box-table">
+<!--
+EOT;
+foreach ($w_check as $key=>$value) {
+print <<<EOT
+-->
+			<tr>
+				<th>$value</th>
+			</tr>
+<!--
+EOT;
+}
+$btn_disabled = !$check ? 'disabled="disabled"' : '';
+print <<<EOT
+-->
+		</table>
+	</div> <!-- /box_main -->
+
+	<div class="box_footer">
+		<div class="step">
+		<form method="post" action='$basename'>
+			<input type="hidden" name="step" value="2">
+			<input type="button" class="button" onclick='history.go(-1)'  value="上一步" />
+			<input type="submit" class="button" name="submit" value="下一步"  $btn_disabled />
+		</form>
+		</div>
+	</div> <!-- /box_footer -->
+
+
+
+<!--
+EOT;
+}elseif($step == 2){
+//-----------------------------------------安装第2步，填写配置信息------------------------------------------------
+print <<<EOT
+-->
+	<div class="box_header">
+		<h2>第二步</h2>
+	</div> <!-- /box_header -->
+
+	<form method="post" action='$basename'>
+	<div class="box_main">
+		<h2>填写数据库信息</h2>
+	    <table class="box-table">
+			<tr>
+				<th class="w120">数据库地址：</th>
+				<td>
+					<input type="text" class="textinput" name='dbhost' value='$dbhost' />
+					<span class="tips">本地127.0.0.1 或 localhost 例如:localhost:6608</span>
+				</td>
+			</tr>
+			<tr>
+				<th>数据库用户名：</th>
+				<td>
+					<input type="text" class="textinput" name='dbuser' value='$dbuser' />
+					<span class="tips">输入MYSQL登录账号</span>
+				</td>
+			</tr>
+			<tr>
+				<th>数据库密码：</th>
+				<td>
+					<input type="password" class="textinput" name='dbpw' value='$dbpw' />
+					<span class="tips">输入MYSQL登录密码</span>
+				</td>
+			</tr>
+			<tr>
+				<th>重复数据库密码：</th>
+				<td>
+					<input type="password" class="textinput" name='dbpw_check' value='$dbpw_check' />
+					<span class="tips">输入MYSQL登录密码</span>
+				</td>
+			</tr>
+			<tr>
+				<th>数据库名：</th>
+				<td>
+					<input type="text" class="textinput" name='dbname' value='$dbname'/>
+					<span class="tips">输入<strong style="color:#F00">已存在的</strong>数据库名称</span>
+				</td>
+			</tr>
+			<tr>
+				<th>数据库编码：</th>
+				<td>
+					<input type="text" class="textinput" name='bianma' value='gbk' id="bianma" disabled="disabled" style="background:#EEE"/>
+					<span class="tips">数据库编码gbk, <strong style="color:#F00">修改编码会造成数据无法识别</strong></span>
+				</td>
+			</tr>
+			<tr>
+				<th>表名前缀：</th>
+				<td>
+					<input type="text" class="textinput" name='dbpre' value='$dbpre' />
+					<span class="tips">数据表默认前缀</span>
+				</td>
+			</tr>
+	    </table>
+	</div> <!-- /box_main -->
+
+<!--
+EOT;
+if($error_password==2){
+	print <<<EOT
+	-->
+	<div class="msg">数据库用户名为空或您所输入的2个密码不一致。</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+	<div class="box_main">
+		<h2>填写管理员信息</h2>
+	    <table class="box-table">
+			<tr>
+				<th class="w120">用 户 名：</th>
+				<td>
+					<input type="text" class="textinput" name='manager' value='$manager' />
+					<span class="tips">设置超级管理员用户名</span>
+				</td>
+			</tr>
+			<tr>
+				<th>密　　码：</th>
+				<td>
+					<input type="password" class="textinput" name='password'/>
+					<span class="tips">设置超级管理员密码,密码不可为空</span>
+				</td>
+			</tr>
+			<tr>
+				<th>重复密码：</th>
+				<td>
+					<input type="password" class="textinput" name='password_check'/>
+					<span class="tips">请重复一遍你的超级管理员密码</span>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>请牢记管理员信息，凭该账号密码管理站点。</td>
+			</tr>
+	    </table>
+	</div> <!-- /box_main -->
+
+<!--
+EOT;
+if($error_password==1){
+	print <<<EOT
+	-->
+	<div class="msg">用户名密码为空或您所输入的2个密码不一致。</div>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+
+	<div class="box_footer">
+		<div class="step">
+			<input type="hidden" name="step" value="3">
+			<input type="button" class="button" onclick='history.go(-1)'  value="上一步" />
+			<input type="submit" class="button" name="submit" value="下一步" />
+		</div>
+	</div> <!-- /box_footer -->
+	</form>
+
+
+<!--
+EOT;
+}elseif($step == 3){
+//-----------------------------------------安装第3步，详细目录权限检测------------------------------------------------
+    print <<<EOT
+    -->
+	<div class="box_header">
+		<h2>第二步</h2>
+	</div> <!-- /box_header -->
+
+	<div class="box_main">
+<!--
+EOT;
+if($check)
+{
+    print <<<EOT
+    -->
+		<h2>配置信息写入</h2>
+		<table class="box-table">
+		  <tr>
+			  <th>数据库配置信息写入</th>
+			  <td><span style="color:#0C6; font-weight:bold;">&radic; 完成</span></td>
+		  </tr>
+		  <tr>
+			  <th>创始人信息写入</th>
+			  <td><span style="color:#0C6; font-weight:bold;">&radic; 完成</span></td>
+		  </tr>
+		</table>
+<!--
+EOT;
+}
+    print <<<EOT
+    -->
+		<br />
+<!--
+EOT;
+   if(!empty($error_database)) {
+        print <<<EOT
+        -->
+		<div class="msg">
+			<img src="images/error.gif" alt="错误" /><br />
+			<strong class="red">数据库升级文件update.sql,请下载官方版.</strong><br />
+			<strong class="black">请返回修改。</strong>
+		</div>
+<!--
+EOT;
+   }elseif($error_password==1){
+        print <<<EOT
+        -->
+		<div class="msg">
+			<img src="images/error.gif" alt="错误" /><br />
+			<strong class="red">用户名密码为空或您所输入的2个密码不一致。</strong><br />
+			<strong class="black">请返回修改。</strong>
+		</div>
+<!--
+EOT;
+   }elseif($error_password==2){
+        print <<<EOT
+        -->
+		<div class="msg">
+			<img src="images/error.gif" alt="错误" /><br />
+			<strong class="red">数据库用户名密码为空或您所输入的2个密码不一致。</strong><br />
+			<strong class="black">请返回修改。</strong>
+		</div>
+<!--
+EOT;
+   }else {
+        print <<<EOT
+        -->
+		<h2>系统文件权限检测</h2>
+		<table class="box-table">
+		  <tr>
+			  <th>目 录 名</th>
+			  <td>状 态</td>
+		  </tr>
+<!--
+EOT;
+        $report_txt = array(
+            1 => '<span style="color:#0C6; font-weight:bold;">&radic; 可写</span>',
+            2 => '<span style="color:#F00; font-weight:bold;">X 不可写</span>',
+            3 => '<span style="color:#F00; font-weight:bold;">X 不存在</span>',
+        );
+
+        foreach($file_check_report as $report){
+            print <<<EOT
+            -->
+			<tr>
+			  <th>$report[0]&nbsp;</th>
+			  <td>{$report_txt[$report[1]]}</td>
+			</tr>
+<!--
+EOT;
+        }
+
+        print <<<EOT
+        -->
+		</table>
+
+<!--
+EOT;
+        if($file_check_error){
+            print <<<EOT
+            -->
+		<div class="msg">
+			<img src="images/error.gif" alt="错误" /><br />
+			<strong class="red">文件权限设置错误。</strong><br />
+			<strong class="black">请根据提示做对应修改，然后刷新此页面。</strong>
+		</div>
+<!--
+EOT;
+        }
+    }
+    $btn_disabled = !$check ? 'disabled="disabled"' : '';
+    print <<<EOT
+    -->
+
+	</div> <!-- /box_main -->
+
+	<div class="box_footer">
+		<div class="step">
+		<form method="post" action='$basename'>
+			<div style="width:560px; float:left;">
+			<input type="checkbox" name="update_demo" checked="checked" value="1">&nbsp;导入演示数据
+			</div>
+			<input type="hidden" name="step" value="4">
+			<input type="button" class="button" onclick='history.go(-1)'  value="上一步" />
+			<input type="submit" class="button" name="submit" value="下一步" $btn_disabled />
+		</form>
+		</div>
+	</div> <!-- /box_footer -->
+
+
+<!--
+EOT;
+}elseif($step == 4){
+//-----------------------------------------安装第4步，数据导入操作------------------------------------------------
+    print <<<EOT
+    -->
+
+	<div class="box_header">
+		<h2>第三步</h2>
+	</div> <!-- /box_header -->
+
+	<div class="box_main">
+<!--
+EOT;
+        if($error){
+            print <<<EOT
+            -->
+		<div class="msg">
+			<img src="images/error.gif" alt="错误" /><br />
+			<strong class="red">$error_txt</strong><br />
+			<strong class="black">请根据提示做对应处理，然后重试。</strong>
+		</div>
+<!--
+EOT;
+        } else {
+            print <<<EOT
+            -->
+		<div id="importsql">
+			<textarea style="width:740px; height:400px; margin:0 auto; padding:10px; overflow:hidden; overflow-y: scroll; font:normal 12px/22px 'Courier New','宋体';">
+正在导入数据库…… \n
+$installinfo
+			</textarea>
+		</div>
+<!--
+EOT;
+}
+    $btn_disabled = $error ? 'disabled="disabled"' : '';
+    print <<<EOT
+    -->
+
+	</div> <!-- /box_main -->
+
+	<div class="box_footer">
+		<div class="step">
+		<form method="post" action='$basename'>
+			<input type="hidden" name="step" value="5">
+			<input type="button" class="button" onclick='history.go(-1)'  value="上一步" />
+			<input type="submit" class="button" name="submit" value="下一步" $btn_disabled />
+		</form>
+		</div>
+	</div> <!-- /box_footer -->
+
+<!--
+EOT;
+}elseif($step == 5){
+//-----------------------------------------安装第5步，安装成功------------------------------------------------
+print <<<EOT
+-->
+
+	<div class="box_header">
+		<h2>第四步</h2>
+	</div> <!-- /box_header -->
+
+	<div class="box_main">
+		<div class="msg">
+			<img src="images/success.gif" alt="成功" /><br />
+			<strong class="black">成功安装广西广电网络管理系统，点击 <font color="Red">下一步：自动删除安装目录</font>，并进入管理后台。
+		</div>
+	</div> <!-- /box_main -->
+
+	<div class="box_footer">
+		<div class="step">
+		<form method="post" action='$basename'>
+			<input type="hidden" name="step" value="6">
+			<input type="button" class="button" onclick='history.go(-1)'  value="上一步" />
+			<input type="submit" class="button" name="submit" value="下一步" />
+		</form>
+		</div>
+	</div> <!-- /box_footer -->
+
+<!--
+EOT;
+}elseif($step == 6){
+//-----------------安装第6步（如果自动删除失败），提示删除手动安装目录------------------------------------
+print <<<EOT
+-->
+
+	<div class="box_header">
+		<h2>第四步</h2>
+	</div> <!-- /box_header -->
+
+	<div class="box_main">
+		<div class="msg">
+			<img src="images/error.gif" alt="错误" /><br />
+			<strong class="red">自动删除安装目录失败！</strong><br />
+			<strong class="black">为安全起见，请手动删除PATH_INSTALL目录！</strong>
+		</div>
+
+        <div style="text-align:center">
+            <strong><a href="../admin.php">进入管理员登陆后台</a></strong>
+		</div>
+	</div> <!-- /box_main -->
+
+	<div class="box_footer">
+		<div class="step">
+		</div>
+	</div> <!-- /box_footer -->
+
+<!--
+EOT;
+}
+//-----------------------------------------页面底部------------------------------------------------
+print <<<EOT
+-->
+
+</div> <!-- /main -->
+
+<div class="footer">
+    <div class="copyright">
+	Copyright &copy; 2014-2024 广西广电网络管理系统(www.96335.com). All Rights Reserved.
+    </div>
+</div> <!-- /footer -->
+
+</body>
+</html>
+
+<!--
+EOT;
+?>-->

@@ -1,0 +1,44 @@
+* {padding:0px; margin:0px;}
+body{background-color:#fff; font-family:'Courier New','宋体'; margin:0px auto auto auto; color:#424849; font-size:12px;}
+ul,li {list-style-type:none;}
+a {color:#006699; text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+.header {width:800px; height:60px; margin:0px auto; overflow:hidden;}
+	.logo {width:265px; height:60px; float:left;}
+	.logo img {border:0px;}
+	.header h1{height:60px; float:left; font:bold 25px/60px '宋体';}
+
+.main {width:780px; padding:10px; margin:8px auto; overflow:hidden; background:#CEE2FB;}
+	.box_header {width:100%;}
+	.box_main {width:760px; margin:5px auto 15px auto;  padding:10px; background:#FFFFFF;}
+	.box_footer {width:100%;}
+	.box_footer .msg {width:500px; float:left; color:red;}
+	.box_footer .step {float:right;}
+	.box_footer .button {padding:3px 10px 2px 10px; margin-left:15px;}
+
+	.license {width:758px; height:400px; overflow:auto; float:left;font:normal 12px/22px 'Courier New','宋体'; border:#BADFFE 1px solid;}
+	.license p {text-indent:24px; margin-bottom:5px;}
+	.license ul {margin-left:50px; margin-bottom:15px;}
+	.license ul li {list-style-type:upper-roman;}
+	.license ul#list_ul {margin:10px 20px; list-style-type:none;}
+	.license ul#list_ul li {list-style-type:decimal;}
+
+	.box-table {width:98%; margin:0px auto; font:normal 14px/24px 'Courier New',"宋体";}
+	.box-table th,.box-table td {padding:3px; vertical-align:middle;}
+	.box-table th { text-align:left; font-weight:normal;}
+	.box-table td { text-align:left;}
+    .auto-w {width:95%;}
+	.w120 {width:120px;}
+	.w360 {width:360px;}
+	.w512 {width:512px;}
+	.textinput {height:20px; padding:5px 6px 2px 6px; border:#b3d2f8 1px solid; line-height:20px;}
+	.tips {font:normal 12px/22px 'Courier New',"宋体"; color:#808080;}
+
+	.msg {height:200px; font:normal 14px/24px 'Courier New',"宋体"; text-align:center;}
+	.msg img {width:64px; height:64px; border:0px; margin-bottom:15px;}
+
+
+.footer {width:800px; margin:15px auto 5px auto; overflow:hidden;}
+	.copyright {text-align:center; font:normal 12px/20px 'Courier New','宋体'; color:#808080;}
+	.copyright a {color:#808080; text-decoration:none;}

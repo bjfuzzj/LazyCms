@@ -1,0 +1,156 @@
+*{padding:0px; margin:0px;}
+body {font-family: "Courier New","宋体"; font-size:12px; text-decoration: none; line-height: 150%; background:#FFFFFF; text-align:center;}
+tr, td {height:25px;}
+input {font-size:12px; padding:5px 4px 2px 4px;}
+select {font-size:12px; height:23px;}
+textarea {padding:5px;}
+button {font-size:12px; height:25px; }
+.button {font-size:12px; height:22px; padding-top:2px;}
+
+.b {font-weight:bold;}
+.red {color:red;}
+.gred {color:#C0C0C0;}
+.alert {color:#FF0000; padding:0 3px;}
+.tips {color:#808080; padding:0 3px;}
+
+a {text-decoration: none;}
+a:link {color: #000000;text-decoration: none;}
+a:visited {color: #000000;text-decoration: none;}
+a:hover {color: #ff6600;text-decoration: none;}
+a:active {color: #000000;text-decoration: none;}
+
+a.Class:link {color: #ffffff;}
+a.Class:visited {color: #ffffff;}
+a.Class:hover {color: #000000;}
+a.Class:active {color: #ffffff;}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 公用信息块样式 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.message {margin:0px auto; padding:10px; width:95%; text-align:center;}
+.error {width:98%; height:32px; font-size:14px; color:red; text-align:left; border:solid 1px #b3d2f8; padding:10px; margin:10px auto;}
+.error img {border:0px; float:left; margin-right:10px; }
+.success {width:98%; font-size:14px; color:green; text-align:left; border:solid 1px #b3d2f8; padding:10px; margin:10px auto;}
+.success img {border:0px; float:left; margin-right:10px; }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 管理登录页面样式 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.loginform {width:350px; height:250px; margin:200px auto auto auto; border:solid 1px #b3d2f8;}
+.loginform img {border:0px;}
+.loginform #logo {float:left; margin-left:25px; margin-top:5px;margin-bottom:5px;}
+#loginform {width:100%; float:left; text-align:left; padding-top:22px; overflow:hidden;  border-top:solid 2px #b3d2f8;}
+	#loginform li {list-style:none; width:350px; margin-bottom:10px; overflow:hidden; font-size:12px; line-height:20px;}
+	#loginform img {border:0px; padding:0px; margin:0px;}
+	#loginform .item {width:80px; float:left; text-align:right; height:20px; padding-left:10px; padding-top:3px; font-size:14px; }
+	#loginform .value {width:230px; float:left; text-align:left; padding-left:15px; }
+	#loginform .input {height:18px; padding:3px 5px 1px 5px; border:solid 1px #b3d2f8;}
+	#loginform .button {width:70px; height:28px; font-size:14px; line-height:20px;}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 后台管理框架样式 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.wrap {width:100%; text-align:center;}
+.container {width:98%; margin:0 auto; overflow:hidden;}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 顶部框架
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#header {height:70px; width:100%; overflow:hidden; margin:0 auto; background:url('top-bg.gif') #ffffff;}
+
+	#logo {width:180px; height:60px; overflow:hidden; float:left; margin-left:20px;}
+	#logo img {width:180px; height:60px; border:0px;}
+	#logo a {display:block; width:180px; height:60px; text-align:center;}
+
+	#tips {width:350px; height:30px; overflow:hidden; float:left; text-align:left; margin-top:25px; margin-left:15px;}
+	#tips p {margin-left:10px; font:normal 12px/20px 'Courier New',"宋体";}
+
+	#tool {width:350px; height:30px; overflow:hidden; float:right; text-align:right; margin-top:25px; margin-right:25px;}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 主框架页面通用样式 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#main {width:100%; font-size:12px; margin:0 auto; overflow:hidden;}
+    .box {width:100%; background:#ffffff;}
+	.box-top {border-bottom:1px #395E4F solid;}
+	.box-top-inner {padding:5px 10px; border-bottom:1px #fff solid; background:#bed393; }
+
+	.nav {width:100%; height:25px; margin:10px auto; font:bold 16px/25px 'Courier New',"宋体"; text-align:left;}
+	.nav .nav_title {float:left;}
+	.nav .searchform {width:300px; overflow:hidden; float:right;}
+
+	.box-header {height:25px; padding:5px 10px; margin:0px auto 2px auto; background:#CEE2FB; border-bottom:#75ADF2 1px solid;}
+	.box-header h4 {height:35px; font-size:14px; line-height:35px;}
+
+	.box-content {width:100%; margin:15px auto;}
+	.box-table {width:98%; margin:0px auto; font:normal 12px/22px 'Courier New',"宋体";}
+	.box-table th,.box-table td {padding:3px; vertical-align:middle;}
+	.box-table th { text-align:right; font-weight:normal;}
+	.box-table td { text-align:left;}
+	.tb-title {float:left; text-align:left; font:normal 12px/28px 'Courier New',"宋体"; color:#808080;}
+	.tb-submit {float:left; text-align:left; font:normal 12px/28px 'Courier New',"宋体"; color:#808080;}
+
+	.list-box {width:100%; margin:0px auto; }
+	.list-tb {width:100%; border-collapse:collapse; text-align:left;}
+	.list-tb tr {height:30px; overflow:hidden;  background:url('tr-bg.gif');  font:normal 12px/30px 'Courier New',"宋体";}
+	.list-tb .tb-header {font:normal 14px/33px "宋体";}
+	.list-tb .tb-footer {}
+	.list-tb td {}
+	.list-tb dt{width:150px; float:left;}
+
+	.box-footer {height:25px; padding:5px 10px; margin:0px auto 5px auto; background:#CEE2FB;}
+	.left-item {float:left; text-align:left; font:normal 12px/28px 'Courier New',"宋体"; color:#808080;}
+	.right-item {float:right; text-align:right; font:normal 12px/28px 'Courier New',"宋体"; color:#808080;}
+	.cate-select {float:left;}
+	.action-item {float:left;}
+	.action-item input {padding:2px; font:normal 12px/14px "宋体";}
+	.pages {height:25px; float:right; line-height:25px; color:#808080;}
+
+    .auto-w {width:95%;}
+	.w120 {width:120px;}
+	.w240 {width:240px;}
+	.w360 {width:360px;}
+	.w560 {width:560px;}
+	.w720 {width:720px;}
+	.h60 {height:60px;}
+	.min-h {height:80px;}
+	.th {border-bottom: solid 1px #395E4F; background:#C0C0C0;}
+
+	.textinput {height:20px; padding:5px 6px 2px 6px; border:#b3d2f8 1px solid; line-height:20px;}
+	/*.textinput {height:25px; padding:2px 6px 3px 6px; border:#b3d2f8 1px solid; line-height:20px;}*/
+	.textarea {border:#b3d2f8 1px solid; font:normal 12px/20px 'Courier New',"宋体";}
+	.selectlist,.border {border:#b3d2f8 1px solid; }
+	.min_btn {padding:0px 3px; font:normal 12px/14px "宋体";}
+
+	.inputremove {width:18px; height:18px; cursor:pointer; border:1px dashed #808080; background:#C0C0C0; font-size:14px; line-height:20px; text-align:center;  float:left; }
+	.inputadd {width:18px; height:18px; cursor:pointer; border:1px dashed #808080; background:#C0C0C0; font-size:14px; line-height:20px; text-align:center; float:left; margin-left:10px;}
+
+	ul.multiple {list-style:none; border:#b3d2f8 1px solid; font:normal 12px/20px 'Courier New',"宋体"; padding:3px; width:160px; height:200px; overflow:auto;}
+	ul.multiple li {height:25px;}
+
+	ul.attribute {list-style:none; width:96%; text-align:left;}
+	ul.attribute li{width:80px; float:left;}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 后台首页样式
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.sys_nav {width:760px; margin:60px auto auto auto; }
+	.sys_nav .sys_intro {margin:20px auto 15px auto; font:normal 16px/30px 'Courier New',"宋体"; text-align:left;}
+
+	.sys_nav .cate_item {width:500px; height:270px; padding:10px; font:normal 12px/20px 'Courier New',"宋体"; text-align:left; border:#b3d2f8 1px dashed; float:left;}
+	.sys_nav .cate_item .cate-header {font:normal 14px/20px 'Courier New',"宋体";}
+	.sys_nav .cate_item .cate-footer {padding-top:20px; font:normal 14px/20px 'Courier New',"宋体";border:#b3d2f8 1px dashed;}
+	.sys_nav .cate_item ul {list-style-type:none; margin:10px auto; color:#333333;}
+	.sys_nav .cate_item li {list-style-type:none; float:left; margin:4px auto;}
+	.sys_nav .cate_item li.item {width:80px; font-weight:700; float:left;}
+	.sys_nav .cate_item li.value {width:420px; float:left;}
+
+	.sys_nav .menu {width:200px; height:270px; text-align:left; padding:10px; border:#b3d2f8 1px dashed; float:right;}
+	.sys_nav .menu ul {list-style-type:none;  font:normal 14px/20px 'Courier New',"宋体"; }
+	.sys_nav .menu li {list-style-type:none; background:url('ie.gif') no-repeat; margin-top:10px; padding-left:10px; text-align:left;}
+	.sys_nav .menu a {margin:5px; text-decoration:none; color:#0033FF;}
+	.sys_nav .menu a:hover {text-decoration:underline;}

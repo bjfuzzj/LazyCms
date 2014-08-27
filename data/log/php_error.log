@@ -1,0 +1,10 @@
+[13-Jun-2014 17:47:24] PHP Fatal error:  Cannot redeclare class db in D:\worklocal\newCms\install\db.php on line 4
+[13-Jun-2014 17:53:37] PHP Fatal error:  Cannot redeclare p_unlink() (previously declared in D:\worklocal\newCms\install\index.php:384) in D:\worklocal\newCms\lib\functions.php on line 154
+[17-Jun-2014 10:53:17] PHP Fatal error:  Using $this when not in object context in D:\worklocal\newCms\module\plate_content.php on line 260
+[17-Jun-2014 10:53:30] PHP Fatal error:  Using $this when not in object context in D:\worklocal\newCms\module\plate_content.php on line 260
+[17-Jun-2014 11:23:07] PHP Warning:  DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: I/O warning : failed to load external entity &quot;file:///D:/template/default/static/CU3ER-config.xml&quot; in D:\worklocal\newCms\controller\ctl_index.php on line 29
+[17-Jun-2014 11:23:07] PHP Fatal error:  Call to a member function getElementsByTagName() on a non-object in D:\worklocal\newCms\controller\ctl_index.php on line 30
+[17-Jun-2014 11:23:30] PHP Warning:  DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: I/O warning : failed to load external entity &quot;file:///D:/template/default/static/CU3ER-config.xml&quot; in D:\worklocal\newCms\controller\ctl_index.php on line 29
+[17-Jun-2014 11:23:30] PHP Fatal error:  Call to a member function getElementsByTagName() on a non-object in D:\worklocal\newCms\controller\ctl_index.php on line 30
+[17-Jun-2014 12:01:50] PHP Fatal error:  Call to undefined method DOMElement::createCDATASection() in D:\worklocal\newCms\controller\ctl_index.php on line 36
+[17-Jun-2014 12:03:11] PHP Fatal error:  Call to undefined function appendChild() in D:\worklocal\newCms\controller\ctl_index.php on line 37

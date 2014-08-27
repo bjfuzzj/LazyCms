@@ -1,0 +1,244 @@
+ /* This needs to be first because FF3 is now supporting this */
+.clearfix {display: inline-block;}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    font-size: 0;
+    visibility: hidden;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+html{color:#666;background:#fff;overflow:auto;overflow-y:scroll;height:100%;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:normal;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%; z-index:-1;}
+input.text{line-height:18px;height:13px;}
+legend{color:#000;}
+br{letter-spacing:0px;}
+a{text-decoration:none;}
+p{margin:0 0 20px 0;line-height:22px;}
+.center{margin:0px auto;}
+.central{text-align:center !important;}
+.left{float:left;}
+.right{float:right;}
+.textleft{ text-align:left; }
+.textright{ text-align:right; }
+.middle{vertical-align:middle;}
+.clear{float:none; clear:both;font-size:0px;line-height:0px;height:0px; min-height:0px; padding:0px; margin:0px; overflow:hidden;}
+.hide{display:none;}
+.master{width:1000px;}
+.hr{height:1px;line-height:0px;font-size:0px;border-top:solid 1px #f1f1f1;margin-top:10px;}
+.inline{ display:inline; }
+.hand{cursor:pointer;}
+a{ outline:none; color:#069; }
+a img{border:none;}
+a:hover{ text-decoration:underline; }
+body{
+	font-size:12px;
+	font-family:"宋体",Arial ;
+	background-color:#fff;
+	line-height:22px;
+}
+/* site wide */
+#wrapper {background:#FFFFFF none repeat scroll 0 0;width:100%;}
+#container{width:1000px; margin:0 auto; padding-bottom:20px;}
+.bound{
+	width:960px;
+	overflow:hidden;
+	margin-top: 0;
+	margin-right: 10px;
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+a.expand { display:block; float:right; font-size:12px; height:18px; line-height:18px; vertical-align:middle; *width:90px; width:auto !important; }
+img.iconTick{ margin-left:5px; vertical-align: middle; }
+span.HighlightSearch {font-weight:bold;}
+#menu{
+	background:url(/template/default/static/images/hw_0erwe.jpg) repeat-x 0 0;
+	height:45px;
+	width:auto !important;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#menu li{ float:left;}
+#menu a{
+	float:left;
+	display:block;
+	height:45px;
+	background-image:url(/template/default/static/images/hw_071977vcsd.jpg);
+	background-repeat:no-repeat;
+	background-position:0 0;
+}
+#menu li.begin a{ width:110px; background-position:0px 0px; }
+#menu li.begin a.hover{ background-position:0px -45px;}
+#menu li.begin a.active{background-position:0px -67px;} 
+#menu li.products a{ width:118px; background-position:-220px 0px; }
+#menu li.products a.hover{ background-position:-220px -45px;}
+#menu li.products a.active{background-position:-220px -67px; }
+#menu li.brand a{ width:110px; background-position:-110px 0px; }
+#menu li.brand a.hover{ background-position:-110px -45px; }
+#menu li.brand a.active{background-position:-110px -67px;}
+#menu li.support a{ width:120px; background-position:-352px 0px; }
+#menu li.support a.hover{ background-position:-352px -45px; }
+#menu li.support a.active{background-position:-352px -67px;}
+
+#menu li.ibh a{ width:140px; background-position:-500px 0px; }
+#menu li.ibh a.hover{ background-position:-500px -45px; }
+#menu li.ibh a.active{background-position:-500px -67px;}
+
+#menu li.about-huawei a{ width:140px; background-position:-660px 0px; }
+#menu li.about-huawei a.hover{ background-position:-660px -45px; }
+#menu li.about-huawei a.active{background-position:-660px -67px;}
+#menu-popup{ z-index:99; position:absolute; top:-1000px; }
+#menu-popup .popup {
+	position:absolute;
+	background-repeat:no-repeat;
+}
+#menu-popup div.title{ margin-bottom:8px;}
+#menu-popup div.title a { color:#B60005; font-size:14px; margin-bottom:5px; font-weight:bold;}
+#menu-popup .begin {height:244px; background:url(/template/default/static/images/hw_071985.png) no-repeat right -245px; padding-right:10px;left:7px;top:15px;}
+#menu-popup .begin .menu_content{height:239px; background:url(/template/default/static/images/hw_071985.png) no-repeat left -1px; padding:25px 15px 15px;}
+#menu-popup .begin .menu_content div { padding:0 0px 0px 20px; width:795px;}
+#menu-popup .begin .menu_content div ul{ float:left; padding:0;}
+#menu-popup .begin .menu_content div li{line-height:24px; white-space:nowrap;}
+#menu-popup .begin .menu_content div li a{color:#333;}
+#menu-popup .begin .menu_content div ul.Arpu{ margin:0 48px 0 0;}
+#menu-popup .begin .menu_content div ul.Broader{ margin:0 45px 0 0;}
+#menu-popup .begin .menu_content div ul.Costdown{ margin:0 38px 0 0;}
+#menu-popup .begin .menu_content div ul.Arpu li{ margin-left:47px;}
+#menu-popup .begin .menu_content div ul.Broader li{ margin-left:50px;}
+#menu-popup .begin .menu_content div ul.Costdown li{ margin-left:42px;}
+#menu-popup .begin .menu_content div ul.Gogreener li{ margin-left:46px;}
+#menu-popup .begin .menu_content div ul li.img{margin-left:0;margin-bottom:7px;}
+#menu-popup .begin .menu_content div p{ clear:both; text-align:right;}
+
+/*产品菜单具体内容 */
+#menu-popup .products { background:url(/template/default/static/images/hw_071985.png) no-repeat right -374px; padding-right:11px;left:-11px;top:15px;}
+#menu-popup .products .menu_content{height:340px; background:url(/template/default/static/images/hw_071985.png) no-repeat left -1px; padding:20px 15px 15px;}
+#menu-popup .products .menu_content div {
+	width:907px;
+	padding-top: 0;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+}
+#menu-popup .products .menu_content div ul{ float:left; padding:0;}
+#menu-popup .products .menu_content div li{line-height:24px; white-space:nowrap;}
+#menu-popup .products .menu_content div li a{color:#333;}
+#menu-popup .products .menu_content div ul.Arpu{ margin:0 40px 0 0;}
+#menu-popup .products .menu_content div ul.Broader{ margin:0 45px 0 0;}
+#menu-popup .products .menu_content div ul.Costdown{ margin:0 38px 0 0;}
+
+#menu-popup .products .menu_content div ul.Arpu li{ margin-left:25px;}
+#menu-popup .products .menu_content div ul.Broader li{ margin-left:70px;}
+#menu-popup .products .menu_content div ul.Costdown li{ margin-left:35px;}
+#menu-popup .products .menu_content div ul.Gogreener li{ margin-left:46px;}
+#menu-popup .products .menu_content div ul.Pingan li{ margin-left:80px;}
+
+#menu-popup .products .menu_content div ul li.img{margin-left:15px;margin-bottom:10px;}
+#menu-popup .products .menu_content div p{ clear:both; text-align:right;}
+
+/*品牌样式 */
+
+
+#menu-popup .brand{
+	background:url(/template/default/static/images/hw_078880.png) no-repeat right -185px;
+	padding-right:10px;
+	left:111px;
+	top:15px;
+}
+#menu-popup .brand .menu_content{height:160px; background:url(/template/default/static/images/hw_078880.png) no-repeat left -1px;padding:10px 15px 15px 10px;_padding:10px 1px 15px 10px;width:200px;}
+#menu-popup .menu_content .brand_ico{margin:30px 0 0 30px;}
+#menu-popup .menu_content .brand_right{
+	float:left;
+	margin-top: 23px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 30px;
+}
+#menu-popup .menu_content .brand_right h1{font-weight:bold;font-size:14px;color:#000;margin-bottom:13px;}
+#menu-popup .menu_content .brand_right h1 a{color:#B60005;font-size:14px;font-weight:bold;text-decoration:none;}
+#menu-popup .menu_content .brand_right h1 a:hover{text-decoration:underline;}
+#menu-popup .menu_content .brand_right span{color:#666666;font-size:12px;margin-left:4px;line-height:35px;}
+#menu-popup .brand .menu_content div.link{ height:30px;width:210px; border-top:1px #dfdfdf solid; line-height:30px; clear:both;margin-top:137px;}
+#menu-popup .brand .menu_content div.link a{color:#003399; margin:0 10px;}
+
+
+
+#menu-popup .about-huawei{ background:url(/template/default/static/images/hw_071980.png) no-repeat left -268px; padding-left:10px;top:2px;left:157px;width:600px;}
+#menu-popup .about-huawei .menu_content{height:267px;background:url(/template/default/static/images/hw_071980.png) no-repeat right 0px; padding:25px 0px 5px 0;clear:both}
+#menu-popup .about-huawei .menu_content div.width{height:200px;padding:0 0 0 20px; width:670px;clear:both; margin:0 0 0 16px;_width:560px;}
+#menu-popup .about-huawei .menu_content div.left{ float:left;width:140px;}
+#menu-popup .about-huawei .menu_content div.left2{float:left;}
+#menu-popup .about-huawei .menu_content div.left ul{ margin:0; padding:0;float:left;}
+#menu-popup .about-huawei .menu_content div.left li{line-height:24px; white-space:nowrap;}
+#menu-popup .about-huawei .menu_content div.left li.title{ color:#B60005; font-weight:bold; font-size:16px; margin-bottom:10px;}
+#menu-popup .about-huawei .menu_content div.left li.title a, #menu-popup .products .menu_content div.width li.title a{color:#B60005;cursor:pointer}
+#menu-popup .about-huawei .menu_content div.left li a{color:#333;}
+#menu-popup .about-huawei .menu_content div.left p{ clear:both; text-align:right; margin-top:8px;}
+#menu-popup .about-huawei .menu_content div.link{ height:30px; width:570px; border-top:1px #dfdfdf solid; line-height:30px; clear:both;margin-top:0px;}
+#menu-popup .about-huawei .menu_content div.link a{color:#003399; margin:0 8px;}
+
+#menu-popup .ibh{ background:url(/template/default/static/images/hw_071980.png) no-repeat left -268px; padding-left:10px;top:2px;left:157px;width:600px;}
+#menu-popup .ibh .menu_content{height:267px;background:url(/template/default/static/images/hw_071980.png) no-repeat right 0px; padding:25px 0px 5px 0;clear:both}
+#menu-popup .ibh .menu_content div.width{height:200px;padding:0 0 0 20px; width:670px;clear:both; margin:0 0 0 16px;_width:560px;}
+#menu-popup .ibh .menu_content div.left{ float:left;width:140px;}
+#menu-popup .ibh .menu_content div.left2{float:left;}
+#menu-popup .ibh .menu_content div.left ul{ margin:0; padding:0;float:left;}
+#menu-popup .ibh .menu_content div.left li{line-height:24px; white-space:nowrap;}
+#menu-popup .ibh .menu_content div.left li.title{ color:#B60005; font-weight:bold; font-size:16px; margin-bottom:10px;}
+#menu-popup .ibh .menu_content div.left li.title a, #menu-popup .products .menu_content div.width li.title a{color:#B60005;cursor:pointer}
+#menu-popup .ibh .menu_content div.left li a{color:#333;}
+#menu-popup .ibh .menu_content div.left p{ clear:both; text-align:right; margin-top:8px;}
+#menu-popup .ibh .menu_content div.link{ height:30px; width:570px; border-top:1px #dfdfdf solid; line-height:30px; clear:both;margin-top:0px;}
+#menu-popup .ibh .menu_content div.link a{color:#003399; margin:0 8px;}
+
+
+#menu li.online-hall a{ width:140px; background-position:-800px 0px; }
+#menu li.online-hall a.hover{ background-position:-800px -45px; }
+#menu li.online-hall a.active{background-position:-800px -67px;}
+#menu-popup .online-hall{ background:url(/template/default/static/images/hw_071980.png) no-repeat left -268px; padding-left:10px;top:14px;left:407px;width:600px;}
+#menu-popup .online-hall .menu_content{height:267px;background:url(/template/default/static/images/hw_071980.png) no-repeat right 0px; padding:25px 0px 5px 0;clear:both}
+#menu-popup .online-hall .menu_content div.width{height:200px;padding:0 0 0 20px; width:670px;clear:both; margin:0 0 0 16px;_width:560px;}
+#menu-popup .online-hall .menu_content div.left{ float:left;width:140px;}
+#menu-popup .online-hall .menu_content div.left2{float:left;}
+#menu-popup .online-hall .menu_content div.left ul{ margin:0; padding:0;float:left;}
+#menu-popup .online-hall .menu_content div.left li{line-height:24px; white-space:nowrap;}
+#menu-popup .online-hall .menu_content div.left li.title{ color:#B60005; font-weight:bold; font-size:16px; margin-bottom:10px;}
+#menu-popup .online-hall .menu_content div.left li.title a, #menu-popup .products .menu_content div.width li.title a{color:#B60005;cursor:pointer}
+#menu-popup .online-hall .menu_content div.left li a{color:#333;}
+#menu-popup .online-hall .menu_content div.left p{ clear:both; text-align:right; margin-top:8px;}
+#menu-popup .online-hall .menu_content div.link{ height:30px; width:570px; border-top:1px #dfdfdf solid; line-height:30px; clear:both;margin-top:0px;}
+#menu-popup .online-hall .menu_content div.link a{color:#003399; margin:0 8px;}
+
+
+.banner {width:960px; margin:5px auto 0 auto; overflow:hidden; background-color:#ffffff;}
+	.banner .banner-list {width:960px; height:280px; overflow:hidden; position:relative;}
+	.banner .slider,.banner .num{position:absolute;}
+	.banner .slider li{list-style:none;display:inline;}
+	.banner .slider img {width:960px; height:280px; border:0px; display:block;}
+	.banner .num {height:18px; right:5px; bottom:5px; }
+	.banner .num li{width:16px; height:16px; float: left; color: #069;text-align: center; font:normal 12px/16px Arial; cursor:pointer; overflow: hidden; margin:3px 1px; border: 1px solid #3da1e0; background-color:#ffffff;}
+	.banner .num li.on{ color:#ffffff; font:bold 14px/16px Arial; background-color:#3da1e0;}
+
+	.min-banner {height:80px; overflow:hidden;}
+	.min-banner img {width:960px; height:120px; border:0px;}
+    
+.gonggao{
+    padding-top:90px; width:960px; height:90px;
+}

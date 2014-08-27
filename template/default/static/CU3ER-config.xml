@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<data>
+  <debug>0</debug><referral>pooiW1AaNCsSBfG5E</referral><licence><![CDATA[!!r;^uKAx;.7~Wh%IU`W{+UyseLQ7[lC]]></licence><licence><![CDATA[G!ASD|GmAnYAD=Y}:W4UvG8M?e2usw9}5URY-?jY]]></licence>
+  <project_settings>
+    <width>960</width>
+    <height>450</height>
+  </project_settings>
+  <settings>
+    <folder_images>/uploadfile</folder_images>
+    <folder_fonts>fonts</folder_fonts>
+    <background>
+      <color transparent="true">0xffffff</color>
+    </background>
+    <start_slide>1</start_slide>
+    <auto_play>true</auto_play>
+    <randomize_slides>false</randomize_slides>
+    <pause_on_rollover>false</pause_on_rollover>
+    <branding align_to="stage" align_pos="TR" x="-10" y="10">
+      <remove_logo_loader>true</remove_logo_loader>
+      <remove_right_menu_info>true</remove_right_menu_info>
+      <remove_right_menu_licence>false</remove_right_menu_licence>
+    </branding>
+    <camera x="0" y="0" z="0" angleX="0" angleY="0" angleZ="0" lens="8"/>
+  </settings>
+  <fonts/>
+  <preloader type="linear" align_to="stage" align_pos="MC" x="9" y="-323.5" width="200" height="17">
+    <background padding="5">
+      <tweenShow tint="0x2185C5" alpha="0.85" scaleX="1" x="0" y="0" scaleY="1"/>
+      <tweenOver alpha="1" y="0" x="0" scaleY="1.1764705882352942" scaleX="1"/>
+      <tweenHide alpha="0" y="0" x="0" scaleX="1" scaleY="1.1764705882352942"/>
+    </background>
+    <loader>
+      <tweenShow tint="0xFFFFFF" alpha="0.8"/>
+      <tweenOver tint="0xFFFFFF" alpha="1"/>
+      <tweenHide tint="0xFFFFFF" alpha="0"/>
+    </loader>
+    <image align_pos="MC" x="0" y="0" width="203" height="203">
+      <url><![CDATA[123LOGO3.png]]></url>
+    </image>
+  </preloader>
+  <controls>
+    <auto_play_indicator type="circular" align_to="stage" align_pos="TC" width="300" height="10" radius="12" x="442" y="12">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background padding="1">
+        <tweenShow tint="0xffffff" alpha="0.2" scaleY="1" x="0" scaleX="1" y="0"/>
+        <tweenOver tint="0xffffff" alpha="0.2" scaleX="1" scaleY="1" x="-0.5" y="-0.3499999999999943"/>
+        <tweenHide tint="0x000000" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+      </background>
+      <loader>
+        <tweenShow tint="0xffffff" alpha="0.4"/>
+        <tweenOver tint="0xffffff" alpha="0.4"/>
+        <tweenHide alpha="0" tint="0xff0000"/>
+      </loader>
+    </auto_play_indicator>
+    <prev_button align_pos="ML" width="40" height="40" x="10" y="0">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background round_corners="0,0,0,0">
+        <tweenShow tint="0x000000" alpha="0" x="0" y="0"/>
+        <tweenOver tint="0x2185c5" alpha="0" time="0.2" ease="Sine.easeOut"/>
+        <tweenHide tint="0x000000" alpha="0"/>
+      </background>
+      <symbol type="3" align_pos="MC" x="0" y="0">
+        <tweenShow alpha="1" tint="0xFFFFFF" x="0" y="0" scaleX="0.9" scaleY="0.9"/>
+        <tweenOver tint="0xffffff" scaleX="1.1337803602218628" scaleY="1.1337803602218628" x="1.5" y="-1.174999999999983" alpha="1"/>
+        <tweenHide tint="0xFFFFFF" x="0" y="0" alpha="0" scaleX="0.85" scaleY="0.85"/>
+      </symbol>
+    </prev_button>
+    <next_button align_pos="MR" width="40" height="40" x="-10" y="0">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background round_corners="0,0,0,0">
+        <tweenShow tint="0x000000" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenOver tint="0x2185c5" alpha="0" ease="Sine.easeOut" time="0.2" delay="0" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenHide tint="0x000000" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+      </background>
+      <symbol type="3" align_pos="MC" x="0" y="0">
+        <tweenShow alpha="1" tint="0xFFFFFF" scaleX="0.9" scaleY="0.9"/>
+        <tweenOver tint="0xFFFFFF" scaleX="1.13" scaleY="1.13" alpha="1" x="0" y="0"/>
+        <tweenHide tint="0xFFFFFF" alpha="0" scaleX="0.85" scaleY="0.85"/>
+      </symbol>
+    </next_button>
+  </controls>
+  <thumbnails align_to="stage" align_pos="BC" x="-9.5" y="-7" width="919" height="44" scroll="horizontal" padding_x="0" padding_y="0">
+    <auto_hide time="3">false</auto_hide>
+    <hide_on_transition>false</hide_on_transition>
+    <background color="0x333333" alpha="0" round_corners="0,0,0,0"/>
+    <thumb width="84" height="33" spacing_x="17" spacing_y="0" y="0" x="17">
+      <background round_corners="0,0,0,0">
+        <tweenShow tint="0x000000" alpha="0.6" y="0" x="0"/>
+        <tweenOver tint="0x000000" alpha="1" scaleX="1" scaleY="1"/>
+        <tweenHide tint="0xFFFFFF" alpha="0"/>
+        <tweenSelected tint="0x000000" alpha="1"/>
+      </background>
+      <title x="-15" y="12" width="56" height="20" text_align="left" text_size="14" use_numbering="true" use_numbering_separator=". " use_heading="true" use_caption="true" font="Arial" text_leading="0" text_bold="true">
+        <tweenShow tint="0x000000" alpha="1" x="0" y="0"/>
+        <tweenOver tint="0x000000" alpha="1"/>
+        <tweenHide tint="0x000000" alpha="1"/>
+        <tweenSelected tint="0x000000" alpha="1"/>
+      </title>
+      <image x="18" y="1" width="82" height="31" round_corners="0,0,0,0">
+        <tweenShow alpha="0.2" y="0" x="0"/>
+        <tweenOver alpha="1" time="0.2" scaleY="1" scaleX="1" ease="Sine.easeOut" delay="0"/>
+        <tweenHide alpha="0.85"/>
+        <tweenSelected alpha="1"/>
+      </image>
+    </thumb>
+  </thumbnails>
+  <defaults>
+    <slide time="5" color="0x000000">
+      <image x="0" y="0" scaleX="1" scaleY="1" align_pos="MC"/>
+      <link target="_blank"><![CDATA[http://www.baidu.com/]]></link>
+      <description>
+        <link target="_blank"/>
+      </description>
+      <seo>
+        <show image="true" heading="true" paragraph="true" caption="true"/>
+      </seo>
+    </slide>
+    <transition type="3D" columns="3" rows="1" type2D="slide" flipAngle="90" flipOrder="0" flipShader="none" flipOrderFromCenter="false" flipDirection="down" flipColor="0x000000" flipBoxDepth="10" flipDepth="300" flipEasing="Sine.easeOut" flipDuration=".6" flipDelay=".15" flipRandomize="0"/>
+  </defaults>
+  <slides width="960" height="360" align_pos="TL" x="0" y="0" corner_TL="0,0" corner_TR="960,0" corner_BL="0,360" corner_BR="960,360">
+    <slide>
+      <url><![CDATA[images/banner-1.jpg]]></url>
+      <seo>
+        <show image="true" heading="true" paragraph="true" caption="true"/>
+      </seo>
+      <link target="_blank"><![CDATA[http://www.baidu.com]]></link>
+      <description/>
+    </slide>
+    <transition flipDepth="500" flipDirection="up"/>
+    <slide>
+      <url><![CDATA[images/banner-2.jpg]]></url>
+      <seo>
+        <show image="true" heading="true" paragraph="true" caption="true"/>
+      </seo>
+      <link target="_self"><![CDATA[http://www.baidu.com]]></link>
+      <description/>
+    </slide>
+    <transition rows="4" columns="1" flipOrder="270"/>
+    <slide>
+      <url><![CDATA[images/banner-3.jpg]]></url>
+      <seo>
+        <show image="true" heading="true" paragraph="true" caption="true"/>
+      </seo>
+      <link target="_blank"><![CDATA[http://www.baidu.com]]></link>
+      <description/>
+    </slide>
+    <transition/>
+    <slide>
+      <url><![CDATA[images/banner-4.jpg]]></url>
+      <seo>
+        <show image="true" heading="true" paragraph="true" caption="true"/>
+      </seo>
+      <link target="_blank"><![CDATA[http://www.baidu.com]]></link>
+      <description/>
+    </slide>
+    <transition flipOrder="135" rows="3" columns="3"/>
+    <slide>
+      <url><![CDATA[images/banner-5.jpg]]></url>
+      <seo>
+        <show image="true" heading="true" paragraph="true" caption="true"/>
+      </seo>
+      <link target="_blank"><![CDATA[]]></link>
+      <description/>
+    </slide>
+    <transition flipOrder="180"/>
+  </slides>
+</data>
