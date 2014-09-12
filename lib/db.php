@@ -8,44 +8,40 @@ class db
      * @var string
      */
     protected static $sql = '';
-    protected static $link_read = null;
+    public static $link_read = null;
+	public static $instance=null;
     protected static $link_write = null;
     protected static $current_link = null; // 当前连接标识
     protected static $query;
     protected static $query_count = 0;
+	
 
-    /**
-     * 连接数据库
-     *
-     * @return void
-     */
-    protected static function init_mysql ($is_read = true, $is_master = false)
-    {
+	private function __construct(){
         if (empty(self::$$link))
         {
             try
             {
                 $link = 'link_read';
                 $host = $GLOBALS['database']['db_host'];
-                self::$$link = @mysql_pconnect($host, $GLOBALS['database']['db_user'], $GLOBALS['database']['db_pass']);
+                self::$$link = @mysqli_connect($host, $GLOBALS['database']['db_user'], $GLOBALS['database']['db_pass']);
                 if (empty(self::$$link))
                 {
-                    throw new Exception(mysql_error(), 10);
+                    throw new Exception(mysqli_connect_errno(), 10);
                 }
                 else
                 {
-                    if (mysql_get_server_info() > '4.1')
+                    if (mysqli_get_host_info(self::$$link) > '4.1')
                     {
                         $charset = str_replace('-', '', strtolower($GLOBALS['database']['db_charset']));
-                        mysql_query("SET character_set_connection=" . $charset . ", character_set_results=" . $charset . ", character_set_client=binary");
+                        mysqli_query(self::$$link,"SET character_set_connection=" . $charset . ", character_set_results=" . $charset . ", character_set_client=binary");
                     }
-                    if (mysql_get_server_info() > '5.0')
+                    if (mysqli_get_host_info(self::$$link) > '5.0')
                     {
-                        mysql_query("SET sql_mode=''");
+                        mysqli_query(self::$$link,"SET sql_mode=''");
                     }
-                    if (@mysql_select_db($GLOBALS['database']['db_name']) === false)
+                    if (mysqli_select_db(self::$$link,$GLOBALS['database']['db_name']) === false)
                     {
-                        throw new Exception(mysql_error(), 11);
+                        throw new Exception(mysqli_error(), 11);
                     }
                 }
             }
@@ -70,11 +66,23 @@ class db
                 {
                     echo $e->getMessage(), '<br/>', '<pre>', $e->getTraceAsString(), '</pre>';
                 }
-
-                exit;
             }
         }
-        return self::$$link;
+	}
+
+	//覆盖__clone()方法，禁止克隆 
+	private function __clone(){}
+    /**
+     * 连接数据库
+     *
+     * @return void
+     */
+    public static function init_mysql ($is_read = true, $is_master = false)
+    {
+        if(! (self::$instance instanceof self) ) {    
+            self::$instance = new self();    
+        }    
+        return self::$instance; 
     }
 
 
@@ -89,14 +97,15 @@ class db
         $sql = trim($sql);
         $GLOBALS ['database'] ['table_prefix'] == 'slcms_' || $sql = str_replace('slcms_', $GLOBALS ['database'] ['table_prefix'], $sql);
 
-        self::$current_link = self::init_mysql(true, $is_master);
+        $db_t = self::init_mysql(true, $is_master);
         try
         {
-            self::$sql = $sql;
-            self::$query = @mysql_query($sql, self::$current_link);
+            self::$sql = $sql;//var_dump(self::$link_read);exit;
+            self::$query = mysqli_query(self::$link_read,$sql);
+			
             if (self::$query === false)
             {
-                throw new Exception(mysql_error());
+                throw new Exception(mysqli_error(self::$link_read));
             }
             else
             {
@@ -126,7 +135,7 @@ class db
      */
     public static function insert_id ()
     {
-        return mysql_insert_id(self::$current_link);
+        return mysqli_insert_id(self::$link_read);
     }
 
 
@@ -137,7 +146,7 @@ class db
      */
     public static function affected_rows ()
     {
-        return mysql_affected_rows(self::$current_link);
+        return mysqli_affected_rows(self::$link_read);
     }
 
 
@@ -149,7 +158,7 @@ class db
     public static function num_rows ($query = false)
     {
         (empty($query)) && $query = self::$query;
-        return mysql_num_rows($query);
+        return mysqli_num_rows($query);
     }
 
 
@@ -163,7 +172,7 @@ class db
     public static function fetch_one ($query = false)
     {
         (empty($query)) && $query = self::$query;
-        return mysql_fetch_array($query, MYSQL_ASSOC);
+        return mysqli_fetch_array($query, MYSQL_ASSOC);
     }
 
 
@@ -178,7 +187,7 @@ class db
     {
         (empty($query)) && $query = self::$query;
         $row = $rows = array();
-        while ($row = mysql_fetch_array($query, MYSQL_ASSOC))
+        while ($row = mysqli_fetch_array($query, MYSQL_ASSOC))
         {
             $rows[] = $row;
         }
@@ -205,7 +214,6 @@ class db
 
             self::$sql = "SELECT {$fields} FROM `{$table}` WHERE {$condition}";
             $result = self::query(self::$sql, false);
-
             return self::fetch_all();
         }
         catch (Exception $e)
@@ -422,7 +430,7 @@ class db
      */
     public static function server_info()
     {
-        return mysql_get_server_info();
+        return mysqli_get_server_info();
     }
 
     /**
@@ -431,7 +439,7 @@ class db
      */
     public static function select_db($dbname)
     {
-        return mysql_select_db($dbname);
+        return mysqli_select_db($dbname);
     }
 
     /**
